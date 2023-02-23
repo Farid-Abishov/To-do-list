@@ -111,7 +111,16 @@
         event.preventDefault();
       }
      
-      
+      function deleteTask(id){
+        let deletedId;
+        for(let index in gorevListesi){
+          if(gorevListesi[index].id == id){
+             deletedId=index;
+          }
+        }
+        gorevListesi.splice(deletedId,1);
+        displayTasks();
+      }
      
     </script>
 </body>
